@@ -1,0 +1,26 @@
+    /***** css for test gallery *****/
+    .row1 {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 5px
+    }
+
+    /* Create four equal columns that sits next to each other */
+    .column1 {
+        flex: 25%;
+        max-height: 25%;
+        padding: 0 5px;
+    }
+
+    .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+    }
+
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media screen and (max-width: 800px) {
+        .column {
+            flex: 50%;
+            max-width: 50%;
+        }
+    }
