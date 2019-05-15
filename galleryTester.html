@@ -18,6 +18,10 @@
     <script src="index.js" defer> </script>
     <script src="calendar.js" defer></script>
 </head>
+<style>
+
+
+</style>
 
 <body>
     <div class="navBar">
@@ -25,29 +29,233 @@
             <li><a href="index.html">Home</a></li>
             <li> <a href="gallery.html">Gallery</a></li>
             <li style="float:right"><a href="about.html">About</a></li>
+            <li style="float:right"><a href="">Send Info</a></li>
             <li> <a class="active" href="galleryTester.html">Gallery Test</a></li>
         </ul>
     </div>
-    <h1>Elgert's Gallery</h1>
-    <p> Go to w3schools website? <a href="https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp" target="_blank"> Click here</a> to see the gallary.</p>
+    <section class="mainSec">
+        <h1>Elgert's Gallery</h1>
+        <p> Go to w3schools website? <a href="https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp" target="_blank"> Click here</a> to see the gallary.</p>
 
-    <h2>Sports</h2>
+        <h2>Sports</h2>
+        <!-- code from w3schools -->
+        <div class="row1">
+            <div class="column1">
+                <img src="Sports_Pics/sports2.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                <img src="Sports_Pics/sports3.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+                <img src="Sports_Pics/sports10.jpg" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+            </div>
+            <div class="column1">
+                <img src="Sports_Pics/sports4.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+                <img src="Sports_Pics/sports5.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+                <img src="Sports_Pics/sports11.jpg" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+            </div>
+            <div class="column1">
+                <img src="Sports_Pics/sports6.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+                <img src="Sports_Pics/sports7.JPG" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+            </div>
+            <div class="column1">
+                <img src="Sports_Pics/sports8.JPG" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+                <img src="Sports_Pics/sports9.JPG" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+            </div>
+        </div>
 
-    <div class="row1">
-        <div class="column1">
-            <img src="Sports_Pics/sports2.jpg">
-            <img src="Sports_Pics/sports3.jpg">
+        <br><a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_lightbox">W3schools LightBox</a><br>
+
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+                <div class="mySlides">
+                    <div class="numbertext">1 / 10</div>
+                    <img src="Sports_Pics/sports2.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 10</div>
+                    <img src="Sports_Pics/sports4.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 10</div>
+                    <img src="Sports_Pics/sports6.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">4 / 10</div>
+                    <img src="Sports_Pics/sports8.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">5 / 10</div>
+                    <img src="Sports_Pics/sports3.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">6 / 10</div>
+                    <img src="Sports_Pics/sports5.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">7 / 10</div>
+                    <img src="Sports_Pics/sports7.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">8 / 10</div>
+                    <img src="Sports_Pics/sports9.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">9 / 10</div>
+                    <img src="Sports_Pics/sports10.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">10 / 10</div>
+                    <img src="Sports_Pics/sports11.jpg" style="width:100%">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+
+                <div class="column">
+                    <img class="demo cursor" src="Sports_Pics/sports2.jpg" style="width:100%" onclick="currentSlide(1)" alt="Iowa Hawk sign">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="Sports_Pics/sports4.jpg" style="width:100%" onclick="currentSlide(2)" alt="South Dakota sign">
+                </div>
+
+                <div class="column">
+                    <img class="demo cursor" src="Sports_Pics/sports6.jpg" style="width:100%" onclick="currentSlide(3)" alt="Iowa Hawk sign">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="Sports_Pics/sports8.jpg" style="width:100%" onclick="currentSlide(4)" alt="Iowa Hawk sign">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="Sports_Pics/sports3.jpg" style="width:100%" onclick="currentSlide(5)" alt="Cubs sign">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="Sports_Pics/sports5.JPG" style="width:100%" onclick="currentSlide(6)" alt="Northern Lights">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="Sports_Pics/sports7.jpg" style="width:100%" onclick="currentSlide(7)" alt="Northern Lights">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="Sports_Pics/sports9.jpg" style="width:100%" onclick="currentSlide(8)" alt="Northern Lights">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="Sports_Pics/sports10.jpg" style="width:100%" onclick="currentSlide(9)" alt="Northern Lights">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="Sports_Pics/sports11.jpg" style="width:100%" onclick="currentSlide(10)" alt="Northern Lights">
+                </div>
+            </div>
         </div>
-        <div class="column1">
-            <img src="Sports_Pics/sports4.jpg">
-            <img src="Sports_Pics/sports5.jpg">
+
+        <script>
+            function openModal() {
+                document.getElementById("myModal").style.display = "block";
+            }
+
+            function closeModal() {
+                document.getElementById("myModal").style.display = "none";
+            }
+
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("demo");
+                var captionText = document.getElementById("caption");
+                /* loop statement for looping in js */
+                if (n > slides.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = slides.length
+                }
+                /*end of loop statement*/
+                /* beginning of the demo pics found at the bottom of the main pic */
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                /* This is what makes the demo pictures active and causes them to be highlighted */
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                captionText.innerHTML = dots[slideIndex - 1].alt;
+            }
+
+        </script>
+        <!-- end of w3 code -->
+
+        <!-- test for space -->
+        <br>
+
+        <h2>Photo Albums</h2>
+
+        <div class="row1">
+            <div class="column1">
+                <img src="Photo_Albums/PhotoAlbums%20(1).jpg">
+                <img src="Photo_Albums/PhotoAlbums%20(5).jpg">
+            </div>
+            <div class="column1">
+                <img src="Photo_Albums/PhotoAlbums%20(2).jpg">
+            </div>
+            <div class="column1">
+                <img src="Photo_Albums/PhotoAlbums%20(3).jpg">
+            </div>
+            <div class="column1">
+                <img src="Photo_Albums/PhotoAlbums%20(4).jpg">
+            </div>
         </div>
-        <div class="column1">
-        <img src="Sports_Pics/sports6.jpg">
-            <img src="Sports_Pics/sports7.JPG">
+        <br>
+
+        <h2>Name Plaques</h2>
+
+        <div class="row1">
+            <div class="column1">
+                <img src="DiffStyleOfNames/DiffName%20(1).jpg">
+                <img src="DiffStyleOfNames/DiffName%20(2).JPG">
+                <img src="DiffStyleOfNames/DiffName%20(3).JPG">
+                <img src="DiffStyleOfNames/DiffName%20(4).JPG">
+                <img src="DiffStyleOfNames/DiffName%20(5).JPG">
+            </div>
+            <div class="column1">
+                <img src="DiffStyleOfNames/DiffName%20(6).JPG">
+                <img src="DiffStyleOfNames/DiffName%20(7).JPG">
+                <img src="DiffStyleOfNames/DiffName%20(8).JPG">
+                <img src="DiffStyleOfNames/DiffName%20(9).JPG">
+            </div>
+            <div class="column1">
+                <img src="DiffStyleOfNames/DiffName%20(10).JPG">
+                <img src="DiffStyleOfNames/DiffName%20(11).JPG">
+                <img src="DiffStyleOfNames/DiffName%20(12).JPG">
+                <img src="DiffStyleOfNames/DiffName%20(13).JPG">
+            </div>
+            <div class="column1">
+                <img src="DiffStyleOfNames/DiffName%20(14).JPG">
+                <img src="DiffStyleOfNames/DiffName%20(15).JPG">
+                <img src="DiffStyleOfNames/DiffName%20(16).JPG">
+                <img src="DiffStyleOfNames/DiffName%20(17).JPG">
+            </div>
         </div>
-        <div class="column1">
-        <img src="Sports_Pics/sports8.JPG">
-        <img src="Sports_Pics/sports9.JPG">
-        </div>
-    </div>
+    </section>
+</body>
